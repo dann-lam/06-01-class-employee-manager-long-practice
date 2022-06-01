@@ -11,7 +11,7 @@ class Manager extends Employee {
         //add to employees array
         this.employees.push(employee)
     }
-    
+
 }
 
 module.exports = Manager;

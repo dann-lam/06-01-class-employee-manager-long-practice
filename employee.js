@@ -10,24 +10,16 @@ class Employee {
     this.salary = salary;
     this.title = title;
     this.manager = manager;
-    if(manager){
+    if (manager) {
       manager.addEmployee(this)
     }
 
   }
 
+  calculateBonus(multiplier) {
+    //bonus = (employee salary) * multiplier
+    let bonus = (this.salary) * multiplier
+    return bonus;
+  }
 
 }
-
-const splinter = new Manager('Splinter', 100000, 'Sensei');
-console.log('Before: ', splinter);
-
-const leo = new Employee('Leonardo', 90000, 'Ninja', splinter);
-console.log(leo.name)
-const mikey = new Employee('Michelangelo', 90000, 'Ninja', splinter);
-const donnie = new Employee('Donatello', 90000, 'Ninja', splinter);
-const raph = new Employee('Raphael', 90000, 'Ninja', splinter);
-
-console.log('After: ', splinter);
-
-module.exports = Employee;
