@@ -2,14 +2,14 @@
 
 ## Instructions
 
-In this phase you will first add an instance method to an existing class that 
-will calculate an `Employee`'s bonus. Your `Manager` class will automatically 
-inherit this method, but you will need it to behave differently for a 
-`Manager`. Luckily, polymorphism allows you to _override_ an existing method 
-and alter its behavior. 
+In this phase you will first add an instance method to an existing class that
+will calculate an `Employee`'s bonus. Your `Manager` class will automatically
+inherit this method, but you will need it to behave differently for a
+`Manager`. Luckily, polymorphism allows you to _override_ an existing method
+and alter its behavior.
 
-Be sure to understand what the problem is asking of you. Use Polya's framework 
-to help build your understanding. Use the specs and local tests provided to 
+Be sure to understand what the problem is asking of you. Use Polya's framework
+to help build your understanding. Use the specs and local tests provided to
 help drive your development.
 
 Run the specs with `npm test test/04-calculate-bonus-spec.js`
@@ -23,7 +23,7 @@ class. A regular `Employee` should calculate their bonus like this:
 bonus = (employee salary) * multiplier
 ```
 
-Run the following locally to confirm everything is working as it should. 
+Run the following locally to confirm everything is working as it should.
 
 ```js
 const raph = new Employee('Raphael', 90000, 'Ninja');
@@ -45,12 +45,12 @@ The the repetitive nature of this problem suggests that a recursive solution
 might be appropriate. You should extract this logic into a helper function
 named `_totalSubSalary()`. The `_` ahead of the method name is an indication
 to other developers that this method is "private" and should only
-be used as a helper. 
+be used as a helper.
 
 Inside of `_totalSubSalary()`, create a sum variable. Check to see if each
 `employee` is an instance of `Manager`. If so, add their `salary` plus a
 recursive call to their `_totalSubSalary()` to sum. If not, simply add
-their `salary` to sum. 
+their `salary` to sum.
 
 The `calculateBonus` logic should look something like this:
 
